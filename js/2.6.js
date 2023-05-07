@@ -2,14 +2,14 @@
 console.log(`#1`);
 let arr = [1, 5, 4, 10, 0, 3];
 for (item of arr) {
+    console.log(item);
     if (item === 10) {
         break;
     }
-    console.log(item);
 };
 //2
 console.log(`#2`);
-console.log(`Номер числа 4 равен ${arr.indexOf(4) + 1}`);
+console.log(`Номер числа 4 равен в массиве ${arr} равен ${arr.indexOf(4) + 1}`);
 //3
 console.log(3);
 arr = [1, 3, 5, 10, 20];
@@ -18,14 +18,12 @@ console.log(arr.join(''));
 console.log(4);
 arr = [];
 let var1;
-var1= [];
 for (let i = 0; i < 3; i++) {
-    var1.push(1);
-};
-console.log(var1);
-for (let i = 0; i <= 2; i++) {
-    arr[i] = var1;
-};
+    arr[i] = [];
+    for (let j = 0; j <= 2; j++) {
+        arr[i][j] = 1;
+    }
+}
 console.log(arr);
 //5
 console.log(5);
@@ -71,12 +69,14 @@ for (item of arr) {
         newarr.push(el);
     }
 }
+console.log(`${arr[0].concat(arr[1])} --- можно было и проще оказывается, удобно!`)
 console.log(newarr);
 //10
 console.log(`#10`);
-arr = [1, 3, 5, 3, 77, 33, 12, 45, 37, 76, -150]
-arr = arr.reduce((a, b) => a + b)
-console.log(arr);
+arr = [1, 3, 5, 3, 77, 33, 12, 45, 37, 76, -150];
+index = Number(prompt(`Введите номер числа в массиве: ${arr}`)) - 1;
+arr = arr[index] + arr[index + 1];
+console.log(`Сумма числа под этим номером и последуещего ему числа = ${arr}`);
 arr = [1, 3, 5, 3, 77, 33, 12, 45, 37, 76, -150];
 //11
 console.log(`#11`);
