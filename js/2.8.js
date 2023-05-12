@@ -113,5 +113,6 @@ function sayHi (name) {
 // Код выше менять нельзя
 
 // Нужно изменить код ниже:
-delayForSecond(sayHi)
+delayForSecond(function () {sayHi('Евгений')})
+
 
