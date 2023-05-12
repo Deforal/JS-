@@ -43,7 +43,7 @@ console.log(`Минимальное = ${minN}, максимальное = ${maxN
 //5
 console.log('#5');
 function randomNum() {
-    num = Math.round(Math.random() * 10);
+    num = Math.ceil(Math.random() * 10);
     return num;
 }
 console.log(randomNum());
@@ -75,7 +75,7 @@ function randomInt(min, max) {
 console.log(randomInt(number1, number2));
 //8
 console.log('#8');
-let currentDate = new Date('May 08, 2023 12:15:35')
+let currentDate = new Date()
 console.log(currentDate.toDateString());
 //9
 console.log('#9');
